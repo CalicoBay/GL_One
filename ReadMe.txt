@@ -1,3 +1,15 @@
+Somewhat naive code but does sport a recycled construction dialog and function
+pointers. For drawing it uses AfxBeginThread each call to OnDraw (WM_PAINT).
+OpenGL rendering contexts could only be current to one thread at a time and
+for our first iteration that is how we did it. The machines we had back then
+were slower than molasses anyway, whats another few milliseconds!
+It was changed for GL_Two.
+
+What's interesting here is the uses of HeapAlloc arrays of doubles and MFCs
+serialization functionality.
+
+As we are entirely self educated this was our first big thing!!
+
 ========================================================================
        MICROSOFT FOUNDATION CLASS LIBRARY : GL_One
 ========================================================================
