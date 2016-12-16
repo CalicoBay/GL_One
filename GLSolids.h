@@ -51,7 +51,7 @@ public:
 	BOOL	 GetIsThisClipped()				  {return m_bIsThisClipped;}
 	CGL_OneDoc* GetDocument()				  {return m_pDocument;}
 // Operations
-	virtual int Change();
+	virtual INT_PTR Change();
 	virtual void Draw(GLenum mode);
 	virtual void Remove();
 	virtual CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
@@ -81,7 +81,7 @@ public:
 
 	void Draw(GLenum mode);
 	void EndClip();
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 };*/
@@ -135,7 +135,7 @@ public:
 //Attributes
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
@@ -157,7 +157,7 @@ public:
 	CDrawObjList m_CompList;
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
@@ -177,7 +177,7 @@ public:
 //Attributes
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
@@ -197,7 +197,7 @@ public:
 //Attributes
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
@@ -221,7 +221,7 @@ public:
 	static CGLObjects* Make();
 //Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
 	~CGLPolygon();
@@ -242,7 +242,7 @@ public:
 	void SetRadius(GLdouble radius) {m_radius = radius;}
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
@@ -263,7 +263,7 @@ public:
 			GLdouble* transform3d, GLdouble* gl_rotation3d, GLdouble* gl_Scale3d);
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation
@@ -283,7 +283,7 @@ public:
 
 // Operations
 	void Draw(GLenum mode);
-	int Change();
+	INT_PTR Change();
 	static CGLObjects* Make();
 	CGLObjects* Repeat(GLuint copies, GLdouble* offset, CGL_OneDoc* pDoc);
 //Implementation

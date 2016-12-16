@@ -188,15 +188,15 @@ void CCompositeDlg::OnDblclkTypeList()
 void CCompositeDlg::OnDblclkObjList() 
 {
 	int n_Selection = m_ObjectList.GetCurSel();
-	if (n_Selection == LB_ERR)
+	if(n_Selection == LB_ERR)
 		return;
 	CGLObjects* pObj = 
 		(CGLObjects*)m_ObjectList.GetItemDataPtr(n_Selection);
-	if ((pObj == NULL)||((int)pObj == -1))
+	if((pObj == NULL)||((int)pObj == -1))
 		AfxMessageBox(_T("Object not found in Composite Map."));
 	else
 	{
-		if (pObj->Change())
+		if(IDOK == pObj->Change())
 		{
 			m_ObjectList.DeleteString(n_Selection);
 			m_ObjectList.InsertString(n_Selection, pObj->GetDescriptor());
